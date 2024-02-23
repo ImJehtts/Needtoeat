@@ -1,0 +1,162 @@
+:root{
+    --main: #aa9a80;
+}
+
+@keyframes flip {
+    from {
+      transform: perspective(400px) rotateY(0);
+    }
+    to {
+      transform: perspective(400px) rotateY(360deg);
+    }
+  }
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+.main-selection {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    height: 95vh;
+    position: relative;
+}
+
+.main-selection:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/eatingout_home.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.main-selection:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.3);
+    z-index: -1;
+}
+
+h2{
+    font-size: 50px; 
+    text-align: center; 
+    margin-bottom: 50px; 
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 35px; 
+}
+
+h4{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.eating_out_selection,
+.staying_home_selection {
+    width: 45%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.eating_out_selection label,
+.staying_home_selection label {
+    width:  100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.eating_out_selection input,
+.staying_home_selection input,
+.eating_out_selection select,
+.staying_home_selection select {
+    width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: var(--main);
+    color: white;
+}
+
+.eating_out_selection input::placeholder,
+.staying_home_selection input::placeholder,
+.eating_out_selection select::placeholder,
+.staying_home_selection select::placeholder {
+    color: white;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 300px; 
+    font-size: 20px;
+    padding: 16px 85px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    text-align: center; 
+    line-height: 1; 
+    border: 5px solid white;
+    background-color:var(--main);
+}
+
+input[type="submit"]:hover{
+    opacity: 0.80;
+}
+
+.result p,
+.result a {
+    color: white;
+}
+.result {
+    width: calc(20% - 20px);
+    text-align: center;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    height: 350px;
+    animation: flip 0.75s ease-in-out;
+}
+
+.result img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    border: 3px solid white;
+
+}
+
+.result img:hover,
+.result p:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.results{
+    background-color: var(--main);
+    padding: 20px;
+}

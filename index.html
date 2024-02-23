@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeedToEat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href="main.css" />
+</head>
+<body>
+    <section class = "main-selection">
+        <section class = "eating_out_selection">
+            <form id = "eating-out">
+            <h2>Eat-Out</h2>
+            <div>
+                <label for="address">Address:</label>
+                <input 
+                    type="text" 
+                    name="address" 
+                    id="address" 
+                    placeholder="e.g. 100 City Centre Drive, Mississauga, Ontario, Canada">
+            </div>
+            <div>
+                <label for="radius">Radius:</label>
+                <select id="radius" name="radius" size="3">
+                    <option value="5000">5km</option>
+                    <option value="10000">10km</option>
+                    <option value="15000">15km</option>
+                    <option value="20000">20km</option>
+                    <option value="25000">25km</option>
+                    <option value="30000">30km</option>
+                    <option value="35000">35km</option>
+                </select>
+            </div>
+            <div>
+                <label for="cuisine_out">Cuisine:</label>
+                <select id="cuisine_out" name="cuisine_out" size="3">
+                    <option value="any">Any</option>
+                    <option value="american">American</option>
+                    <option value="asian">Asian</option>
+                    <option value="caribbean">Caribbean</option>
+                    <option value="french">French</option>
+                    <option value="greek">Greek</option>
+                    <option value="indian">Indian</option>
+                    <option value="italian">Italian</option>
+                    <option value="mediterranean">Mediterranean</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="middle eastern">Middle eastern</option>
+                    <option value="south american">South american</option>
+                </select>
+            </div>
+            <input type="submit" value="Search"/>
+        </form>
+        </section>
+        <section class = "staying_home_selection">
+            <form id = "staying-home">
+                <h2>Stay-Home</h2>
+                <div>
+                    <label for="ingredients">Ingredients:</label>
+                    <input 
+                        type="text" 
+                        name="ingredients" 
+                        id="ingredients" 
+                        placeholder="Separate with commas">
+                </div>
+                <div>
+                    <label for="restrictions">Restrictions: (multi-select)</label>
+                    <select id="restrictions" name="restrictions" size="3" multiple>
+                        <option value="none">None</option>
+                        <option value="alcohol-free">Alcohol-free</option>
+                        <option value="dairy-free">Dairy-free</option>
+                        <option value="egg-free">Egg-free</option>
+                        <option value="fish-free">Fish-free	</option>
+                        <option value="gluten-free">Gluten-free</option>
+                        <option value="low-sugar">Low-sugar</option>
+
+                        <option value="pecatarian">Pecatarian</option>
+                        <option value="pork-free">Pork-free</option>
+                        <option value="sesame-free">Sesame-free	</option>
+                        <option value="shellfish-free">Shellfish-free</option>
+                        <option value="soy-free">Soy-free</option>
+                        <option value="tree-nut-free">Tree-Nut-free</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cuisine_home">Cuisine:</label>
+                    <select id="cuisine_home" name="cuisine_home" size="3">
+                        <option value="any">Any</option>
+                        <option value="american">American</option>
+                        <option value="asian">Asian</option>
+                        <option value="caribbean">Caribbean</option>
+                        <option value="french">French</option>
+                        <option value="greek">Greek</option>
+                        <option value="indian">Indian</option>
+                        <option value="italian">Italian</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="middle eastern">Middle eastern</option>
+                        <option value="south american">South american</option>
+                    </select>
+                </div>
+                <input type="submit" value="Search"/>
+            </form>
+        </section>
+    </section>
+    <section class="results">
+        <h3>Results</h3>
+        <h4>*results are open restaurants and include some of your ingredients*</h4>
+        <div class="list" id="results_list"></div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
