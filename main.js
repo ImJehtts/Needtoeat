@@ -9,8 +9,8 @@ let cuisine_home = '';
 const APP_ID = '[ADD YOUR OWN EDAMAM API ID]';
 const APP_KEY = '[ADD YOUR OWN EDAMAM API KEY]';
 
-const yelp_auth = 'Bearer [ADD YOUR OWN YELP API KEY]';
-const yelp_origin = '[ADD YOUR OWN BROSWER ORIGIN]'; //example: http://127.0.0.1:8800/index.html
+const YELP_AUTH = 'Bearer [ADD YOUR OWN YELP API KEY]';
+const YELP_ORIGIN = '[ADD YOUR OWN BROSWER ORIGIN]'; //example: http://127.0.0.1:8800/index.html
 
 const eat_out_form = document.querySelector('#eating-out');
 const stay_home_form = document.querySelector('#staying-home');
@@ -115,8 +115,8 @@ function api_call_eatout(){
     fetch(API_ENDPOINT, {
         method: 'GET',
         headers: {
-            'Authorization': yelp_auth,
-          'Origin': yelp_origin,
+            'Authorization': YELP_AUTH,
+          'Origin': YELP_ORIGIN,
           'X-Requested-With': 'XMLHttpRequest'
         }
       })
